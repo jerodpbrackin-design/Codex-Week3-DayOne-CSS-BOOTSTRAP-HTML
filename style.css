@@ -1,0 +1,179 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Root variables */
+:root {
+  --brand-blue: #005bbb;
+  --brand-gold: #d9a441;
+  --brand-bg-gradient: linear-gradient(135deg, #ffe9c0, #f4d69f);
+  --text-dark: #1b1b1b;
+}
+
+/* Page background */
+#page-bg {
+  background: var(--brand-bg-gradient);
+  min-height: 100vh;
+  color: var(--text-dark);
+  padding-top: 0;
+  flex: 1;
+  padding-bottom: 80px;
+}
+
+/* Navbar */
+.navbar {
+  --brand-bg-gradient: linear-gradient(
+    135deg,
+    #fff5df 0%,
+    #ffe9c0 35%,
+    #f4d69f 100%
+  );
+  backdrop-filter: blur(8px); /* perfect match to your gradient */
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(217, 164, 65, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+#logo-container {
+  width: 80px;
+  height: auto;
+  padding: 0;
+  background: none; /* remove the tile */
+  box-shadow: none; /* kill the shadow */
+  border-radius: 0; /* remove rounding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#logo-container img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#logo-container:hover {
+  transform: translateY(-1px); /* tiny lift effect */
+  cursor: pointer;
+  background: transparent;
+}
+
+/* Buttons */
+.btn-brand {
+  padding: 8px 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.25s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-accent-brand {
+  background: var(--brand-bg-gradient);
+  color: var(--brand-blue);
+  box-shadow: 0 4px 10px rgba(130, 95, 30, 0.3);
+}
+
+.btn-accent-brand:hover {
+  background: var(--brand-bg-gradient); /* lighter, friendlier hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(130, 95, 30, 0.3);
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--brand-blue);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-top: 12px;
+  color: #444;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer */
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  background: rgba(255, 225, 180, 0.92); /* same tone as navbar */
+  backdrop-filter: blur(6px);
+  padding: 1.2rem 0;
+
+  border-top: 1px solid rgba(217, 164, 65, 0.25);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999; /* keeps it above content */
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* clean spacing between text and icons */
+}
+
+.footer-socials {
+  display: flex;
+  gap: 18px; /* wider spacing looks cleaner */
+  margin-top: 4px;
+}
+
+.footer-socials a i {
+  font-size: 1.3rem;
+  color: #6b552f;
+  transition: 0.2s ease;
+}
+
+.footer-socials a:hover i {
+  color: #b4832a;
+  transform: translateY(-2px);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  #logo-container {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+  }
+  #page-bg {
+    padding-top: 0;
+  }
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .btn-brand {
+    padding: 7px 16px;
+    font-size: 0.9rem;
+  }
+}

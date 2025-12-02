@@ -9,40 +9,65 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body id="page-bg">
-    <!-- NAVIGATION (must be inside body!) -->
-    <nav class="navbar d-flex align-items-center justify-content-between px-4">
-      <div id="logo-container">
-        <img src="./assets/pelican-light.png" alt="Pelican State IT Logo" />
-      </div>
+  <body>
+    <div id="page-bg">
+      <!-- NAVIGATION (must be inside body!) -->
+      <nav
+        class="navbar d-flex align-items-center justify-content-between px-4"
+      >
+        <div id="logo-container">
+          <img src="./assets/pelican-light.png" alt="Pelican State IT Logo" />
+        </div>
 
-      <div class="d-flex align-items-center gap-3">
-        <button
-          class="btn-brand btn-accent-brand"
-          onclick="location.href = '/services'"
-        >
-          Services
-        </button>
+        <div class="d-flex align-items-center gap-3">
+          <button
+            class="btn-brand btn-accent-brand"
+            onclick="location.href = '/services.html'"
+          >
+            Services
+          </button>
 
-        <button
-          class="btn-brand btn-accent-brand"
-          onclick="location.href = '/login'"
-        >
-          Login
-        </button>
-      </div>
-    </nav>
+          <button
+            class="btn-brand btn-accent-brand"
+            onclick="location.href = '/about-us.html'"
+          >
+            About Us
+          </button>
+          <button
+            class="btn-brand btn-accent-brand"
+            onclick="location.href = '/contact.html'"
+          >
+            Contact
+          </button>
+        </div>
+      </nav>
 
-    <section class="hero-section">
-      <div class="container text-center py-1">
-        <h1 class="hero-title">Welcome to Pelican Stack Services</h1>
-        <p class="hero-subtitle">
-          Professional, secure, and reliable IT services for small businesses.
-        </p>
+      <section class="hero-section">
+        <div class="container text-center py-1">
+          <h1 class="hero-title">Welcome to Pelican Stack Services</h1>
+          <p class="hero-subtitle">
+            Professional, secure, and reliable IT services for small businesses.
+          </p>
+        </div>
+      </section>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>© 2024 Jerod Brackin - Pelican State IT • All Rights Reserved</p>
+
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
       </div>
-    </section>
+    </footer>
   </body>
 </html>
