@@ -3,9 +3,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-
-  display: flex;
-  flex-direction: column;
   font-family: 'Inter', sans-serif;
 }
 
@@ -24,7 +21,7 @@ body {
   color: var(--text-dark);
   padding-top: 0;
   flex: 1;
-  padding-bottom: 80px;
+  /* REMOVE this: padding-bottom: 80px; */
 }
 
 /* Navbar */
@@ -59,6 +56,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 #logo-container img {
   width: 60px;
   height: auto;
@@ -117,24 +115,16 @@ body {
 
 /* Footer */
 .site-footer {
-  position: fixed;
+  position: sticky;
   bottom: 0;
-  left: 0;
-
   width: 100%;
-  background: rgba(255, 225, 180, 0.92); /* same tone as navbar */
+  background: rgba(255, 225, 180, 0.92);
   backdrop-filter: blur(6px);
   padding: 1.2rem 0;
-
   border-top: 1px solid rgba(217, 164, 65, 0.25);
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  z-index: 999; /* keeps it above content */
 }
+
 .footer-content {
   display: flex;
   flex-direction: column;
