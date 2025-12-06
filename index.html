@@ -226,23 +226,24 @@
         <p>© 2025 Jerod Brackin • Pelican State IT • All Rights Reserved</p>
       </footer>
     </div>
-
+    <script src="handleLeads.js"></script>
     <script>
       document
         .getElementById('contact-form')
-        .addEventListener('submit', function (e) {
+        .addEventListener('submit', async (e) => {
           e.preventDefault()
 
-          const data = {
-            name: name.value,
-            email: email.value,
-            message: message.value,
+          document.getElementById('form-status').innerText = 'Sending...'
+
+          try {
+            await handleLeads() // calls your Supabase lead creator
+            document.getElementById('form-status').innerText = 'Message sent!'
+            e.target.reset()
+          } catch (err) {
+            console.error(err)
+            document.getElementById('form-status').innerText =
+              'Error sending message.'
           }
-
-          console.log('Lead Submitted:', data)
-          document.getElementById('form-status').innerText = 'Message sent!'
-
-          this.reset()
         })
     </script>
   </body>
